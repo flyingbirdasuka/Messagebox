@@ -19,7 +19,6 @@ class MessagesController extends Controller
 
     public function create(){
     	$users = User::where('id', '!=', Auth::id())->get();
-    	
     	return view('create')->with('users', $users);
     }
 
@@ -46,7 +45,6 @@ class MessagesController extends Controller
     }
 
     public function reply(int $id, String $subject ){
-    	
     	$users = User::where('id', $id)->get();
     	$subject = 'Re: ' . $subject; 
     	return view('reply')->with(['users'=> $users, 'subject'=> $subject]);
@@ -61,7 +59,6 @@ class MessagesController extends Controller
 
     public function deleted(){
     	$messages = Message::with('userFrom')->where('user_id_to', Auth::id())->get();
-
     	return view('deleted')->with('messages', $messages);
   
     }
