@@ -13,8 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                                            
+                    
                         <form action="/home" method="post">
                             @csrf
                          <div class="form-group">
