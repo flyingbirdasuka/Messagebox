@@ -13,15 +13,13 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                          
-                            <ul>
-                                <li>From : {{$message->userFrom->name}} ({{$message->userFrom->email}})</li>
-                                <li>Subject : {{$message->subject}}</li>
-                                <li>Message : {{$message->body}}</li>
-                            </ul>
-                             <a href="/home/reply/{{$message->userFrom->id}}/{{$message->subject}}">Reply</a> 
-                             <a class="badge badge-danger float-right" href="/home/delete/{{$message->id}}">Delete</a> 
-                      
+                        <ul>
+                            <li>From : {{$message->userFrom->name}} ({{$message->userFrom->email}})</li>
+                            <li>Subject : {{$message->subject}}</li>
+                            <li>Message : {{$message->body}}</li>
+                        </ul>
+                         <a href="/home/reply/{{$message->userFrom->id}}/{{$message->subject}}">Reply</a> 
+                         <a class="badge badge-danger float-right" href="/home/delete/{{$message->id}}">Delete</a>
                 </div>
             </div>
         </div>
